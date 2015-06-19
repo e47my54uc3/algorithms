@@ -67,6 +67,32 @@ class Binary_Tree
     end
   end
 
+
+  def insert_into_binary_tree(root, key) #must use breath first search to add to node whose left or right child nil.
+    new_node = Node.new(key)
+    return new_node if !root
+
+    queue = Queue.new
+    queue.enqueue(root)
+
+    while !queue.is_empty?
+      visited_node = queue.dequeue
+
+      if visited_node.left_child
+        queue.enqueue(visited_node.left_child)
+      else
+        visited_node.left_child = new_node
+        return
+      end
+
+      if visited_node.right_child
+        queue.enqueue(visited_node.right_child)
+      else
+        visited_node.right_child = new_node
+        return
+      end
+    end
+  end
 end
 
 # TEST DRIVE
