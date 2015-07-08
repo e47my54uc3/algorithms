@@ -1,6 +1,6 @@
-public class DoublyLinkedListDemo {
+public class DoublyEndedListDemo {
   public static void main(String[] args){
-    DoublyLinkedList dList = new DoublyLinkedList();
+    DoublyEndedList dList = new DoublyEndedList();
 
       dList.insertAtTail(9);
 
