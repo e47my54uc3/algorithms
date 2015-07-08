@@ -9,6 +9,16 @@ public class LinkedListDemo{
     list.insertAtHead(19);
     list.insertAtHead(20);
 
+
+
     System.out.println(list);
+
+    System.out.println(list.length());
+    list.deleteFromHead();
+      System.out.println(list);
+
+    System.out.println(list.length());
+
+    System.out.println("Found: " +list.find(12));
   }
 }
